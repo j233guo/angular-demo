@@ -1,0 +1,19 @@
+.search {
+    width: 600px;
+    margin: auto;
+
+}
+
+.search > input {
+    margin: 20px;
+    width: 350px;
+    height: 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.searchBtn {
+    height: 35px;
+}

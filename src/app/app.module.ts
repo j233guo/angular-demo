@@ -12,6 +12,7 @@ import { TodolistComponent } from './components/todolist/todolist.component';
 import { SearchComponent } from './components/search/search.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { ProductlistComponent } from './components/home/productlist/productlist.component';
+import { StorageService } from './services/storage.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { ProductlistComponent } from './components/home/productlist/productlist.
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

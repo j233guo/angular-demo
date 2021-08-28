@@ -1,1 +1,20 @@
-<p>search works!</p>
+<h2>Search</h2>
+<div class="search">
+    <input type="text" [(ngModel)]="keyword">
+    <button (click)="doSearch()" class="searchBtn">Search</button>
+
+    <hr/>
+
+    <div *ngIf="historyList.length > 0">
+        <h3>Search History</h3>
+        <ul>
+            <li *ngFor="let item of historyList; let i = index">
+                {{item}}  &nbsp; &nbsp; - - - - - - - - - - &nbsp; &nbsp;
+                <button (click)="deleteHistory(i)">Remove</button>
+            </li>
+        </ul>
+        <br>
+        <button (click)="clearHistory()">Clear Search History</button>
+    </div>
+    
+</div>

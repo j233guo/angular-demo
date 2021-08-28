@@ -2,7 +2,10 @@
 <div class="peopleList">
     <ul>
         <li>
-            Name: <input type="text" [(ngModel)]="peopleInfo.username" class="form-input">
+            First Name: <input type="text" [(ngModel)]="peopleInfo.firstName" class="form-input">
+        </li>
+        <li>
+            Last Name: <input type="text" [(ngModel)]="peopleInfo.lastName" class="form-input">
         </li>
         <li>
             Gender: 
@@ -28,8 +31,8 @@
             </span>
         </li>
         <li>
-            Remark: <br/>
-            <textarea name="remark" rows="10" cols="50" [(ngModel)]="peopleInfo.remark"></textarea>
+            Remark: <br><br>
+            <textarea name="remark" rows="10" cols="60" [(ngModel)]="peopleInfo.remark"></textarea>
         </li>
     </ul>
 
