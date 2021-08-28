@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    zoom: 125%;
+}
+
+.content {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.content .left {
+    width: 200px;
+    border-right: 1px solid grey;
+    height: 500px;
+    padding: 15px;
+}
+
+.content .left a {
+    text-decoration: none;
+}
+
+.content .right {
+    flex: 1px;
+    padding-left: 20px;
+}
+
+.active {
+    color: red;
+}

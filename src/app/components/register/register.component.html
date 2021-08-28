@@ -1,0 +1,40 @@
+<h2>Student Register</h2>
+<div class="peopleList">
+    <ul>
+        <li>
+            Name: <input type="text" [(ngModel)]="peopleInfo.username" class="form-input">
+        </li>
+        <li>
+            Gender: 
+            <input type="radio" value="male" name="gender" id="gender1" [(ngModel)]="peopleInfo.gender">
+            <label for="gender1">Male</label>
+            <input type="radio" value="female" name="gender" id="gender2" [(ngModel)]="peopleInfo.gender">
+            <label for="gender2">Female</label>
+            <input type="radio" value="non-binary" name="gender" id="gender3" [(ngModel)]="peopleInfo.gender">
+            <label for="gender3">Non-Binary</label>
+        </li>
+        <li>
+            City: 
+            <select name="city" id="city" [(ngModel)]="peopleInfo.city">
+                <option [value]="item" *ngFor="let item of cities">{{item}}</option>
+            </select>
+        </li>
+        <li>
+            Hobby:
+            <span *ngFor="let item of peopleInfo.hobbies; let i = index">
+                <input type="checkbox" [id]="'check' + i" [(ngModel)]="item.checked">
+                <label [for]="'check' + i">{{item.title}}</label>
+                &nbsp; &nbsp;
+            </span>
+        </li>
+        <li>
+            Remark: <br/>
+            <textarea name="remark" rows="10" cols="50" [(ngModel)]="peopleInfo.remark"></textarea>
+        </li>
+    </ul>
+
+    <button (click)="getContent()">Get form contents</button>
+
+    <br/><br/><br/>
+    <pre>{{peopleInfo | json}}</pre>
+</div>
