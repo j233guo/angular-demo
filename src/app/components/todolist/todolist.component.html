@@ -1,1 +1,27 @@
-<p>todolist works!</p>
+<h2>To Do List</h2>
+<div class="todolist">
+    <input type="text" class="form-input" [(ngModel)]="keyword" (keyup)="doAdd($event)">
+
+    <hr/>
+
+    <h3>To Do</h3>
+
+    <ul>
+        <li *ngFor="let item of todo; let i = index" [hidden]="item.status === true">
+            <input type="checkbox" [(ngModel)]="item.status" (change)="checkboxChange()"/>
+            {{item.title}}  &nbsp; &nbsp; - - - - - - - - - - &nbsp; &nbsp;
+            <button (click)="deleteData(i)">Remove</button>
+        </li>
+    </ul>
+
+    <hr/>
+
+    <h3>Completed</h3>
+
+    <ul>
+        <li *ngFor="let item of todo; let i = index" [hidden]="item.status === false">
+            <input type="checkbox" [(ngModel)]="item.status" (change)="checkboxChange()"/>
+            {{item.title}} ---------- <button (click)="deleteData(i)">Remove</button>
+        </li>
+    </ul>
+</div>

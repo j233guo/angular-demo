@@ -28,8 +28,8 @@ export class SearchComponent implements OnInit {
         console.log(this.keyword);
     }
 
-    deleteHistory(i: number): void {
-        alert(`${this.historyList[i]} is deleted`);
+    removeHistory(i: number): void {
+        alert(`Removed ${this.historyList[i]}`);
         this.historyList.splice(i, 1);
         this.storage.set('searchList', this.historyList);
     }

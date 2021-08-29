@@ -10,7 +10,7 @@
         <ul>
             <li *ngFor="let item of historyList; let i = index">
                 {{item}}  &nbsp; &nbsp; - - - - - - - - - - &nbsp; &nbsp;
-                <button (click)="deleteHistory(i)">Remove</button>
+                <button (click)="removeHistory(i)">Remove</button>
             </li>
         </ul>
         <br>
