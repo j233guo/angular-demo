@@ -12,9 +12,9 @@ export class RegisterComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    cities: string[] = ['Greater Toronto Area', 'Ottawa-Gatineau', 'Hamilton', 'Region of Waterloo', 'London', 'Kingston', 'Niagara Falls', 'Greater Sudbury']
+    public cities: string[] = ['Greater Toronto Area', 'Ottawa-Gatineau', 'Hamilton', 'Region of Waterloo', 'London', 'Kingston', 'Niagara Falls', 'Greater Sudbury']
 
-    peopleInfo: any = {
+    public peopleInfo: any = {
         firstName: '',
         lastName: '',
         gender: '',

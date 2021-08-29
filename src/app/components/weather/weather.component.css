@@ -1,0 +1,21 @@
+.weatherInfo {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.weatherInfo .info {
+    text-align: center;
+    border: 1px solid;
+    padding-bottom: 20px;
+}
+
+#temp {
+    font-size: 5em;
+}
+
+#icon {
+    width: 100px;
+    height: 100px;
+}

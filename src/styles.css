@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    zoom: 125%;
+    zoom: 110%;
 }
 
 .content {
@@ -22,7 +22,7 @@ body {
 
 .content .right {
     flex: 1px;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .active {

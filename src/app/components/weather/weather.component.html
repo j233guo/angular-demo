@@ -1,1 +1,18 @@
-<p>weather works!</p>
+<div>
+    City:
+    <select name="city" id="city" [(ngModel)]="cityUrl" (change)="onChange()">
+        <option value="" disabled selected>Select City</option>
+        <option *ngFor="let item of cityList" [value]="item.url">{{item.name}}</option>
+    </select>
+    <div class="weatherInfo" *ngIf="loaded">
+        <div class="info">
+            <h1>{{weatherCondition.location}}</h1>
+            <p>{{weatherCondition.condition}}</p>
+            <img [src]="weatherCondition.icon" id="icon">
+            <h1 id="temp">{{weatherCondition.temp}}º</h1>
+            <p>Feels like: {{weatherCondition.feelsLike}}</p>
+        </div>
+        <p>As of: {{time}}</p>
+        <p>Data powered by weatherapi.com</p>
+    </div>
+</div>

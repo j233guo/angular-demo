@@ -13,9 +13,8 @@ export class TodolistComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    keyword: string = '';
-
-    todo: any[] = [];
+    public keyword: string = '';
+    public todo: any[] = [];
 
     doAdd(e: any) {
         if(e.keyCode === 13 && this.keyword !== '') {
